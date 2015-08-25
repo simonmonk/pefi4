@@ -1,0 +1,397 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.77 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.78 secs
+ 
+--> Reading design: second_counter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "second_counter.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "second_counter"
+Output Format                      : NGC
+Target Device                      : xc3s50a-4-tq144
+
+---- Source Options
+Top Module Name                    : second_counter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "decoder_7_seg.v" in library work
+Compiling verilog file "multiplexed_7_seg_display.v" in library work
+Module <decoder_7_seg> compiled
+Compiling verilog file "second_counter.v" in library work
+Module <multiplexed_7_seg_display> compiled
+Module <second_counter> compiled
+No errors in compilation
+Analysis of file <"second_counter.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <second_counter> in library <work>.
+
+Analyzing hierarchy for module <multiplexed_7_seg_display> in library <work>.
+
+Analyzing hierarchy for module <decoder_7_seg> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <second_counter>.
+Module <second_counter> is correct for synthesis.
+ 
+Analyzing module <multiplexed_7_seg_display> in library <work>.
+Module <multiplexed_7_seg_display> is correct for synthesis.
+ 
+Analyzing module <decoder_7_seg> in library <work>.
+Module <decoder_7_seg> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <decoder_7_seg>.
+    Related source file is "decoder_7_seg.v".
+    Found 16x8-bit ROM for signal <SEG>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <decoder_7_seg> synthesized.
+
+
+Synthesizing Unit <multiplexed_7_seg_display>.
+    Related source file is "multiplexed_7_seg_display.v".
+    Found 3-bit register for signal <DIGIT>.
+    Found 4-bit register for signal <digit_data>.
+    Found 3-bit up counter for signal <digit_posn>.
+    Found 24-bit up counter for signal <prescaler>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   7 D-type flip-flop(s).
+Unit <multiplexed_7_seg_display> synthesized.
+
+
+Synthesizing Unit <second_counter>.
+    Related source file is "second_counter.v".
+    Found 4-bit up counter for signal <hundreds>.
+    Found 24-bit up counter for signal <prescaler>.
+    Found 4-bit up counter for signal <tens>.
+    Found 4-bit up counter for signal <units>.
+    Summary:
+	inferred   4 Counter(s).
+Unit <second_counter> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Counters                                             : 6
+ 24-bit up counter                                     : 2
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 3
+# Registers                                            : 2
+ 3-bit register                                        : 1
+ 4-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Counters                                             : 6
+ 24-bit up counter                                     : 2
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 3
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <second_counter> ...
+
+Optimizing unit <multiplexed_7_seg_display> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block second_counter, actual ratio is 7.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 70
+ Flip-Flops                                            : 70
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : second_counter.ngr
+Top Level Output File Name         : second_counter
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 12
+
+Cell Usage :
+# BELS                             : 212
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 46
+#      LUT2                        : 4
+#      LUT2_L                      : 3
+#      LUT3                        : 4
+#      LUT4                        : 41
+#      MUXCY                       : 58
+#      VCC                         : 1
+#      XORCY                       : 48
+# FlipFlops/Latches                : 70
+#      FDE                         : 7
+#      FDR                         : 48
+#      FDRE                        : 15
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 11
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50atq144-4 
+
+ Number of Slices:                       52  out of    704     7%  
+ Number of Slice Flip Flops:             70  out of   1408     4%  
+ Number of 4 input LUTs:                104  out of   1408     7%  
+ Number of IOs:                          12
+ Number of bonded IOBs:                  12  out of    108    11%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 70    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.401ns (Maximum Frequency: 156.228MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 7.142ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 6.401ns (frequency: 156.228MHz)
+  Total number of paths / destination ports: 2817 / 155
+-------------------------------------------------------------------------
+Delay:               6.401ns (Levels of Logic = 8)
+  Source:            prescaler_8 (FF)
+  Destination:       units_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: prescaler_8 to units_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.590  prescaler_8 (prescaler_8)
+     LUT4:I0->O            1   0.648   0.000  prescaler_cmp_eq0000_wg_lut<0> (prescaler_cmp_eq0000_wg_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  prescaler_cmp_eq0000_wg_cy<0> (prescaler_cmp_eq0000_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  prescaler_cmp_eq0000_wg_cy<1> (prescaler_cmp_eq0000_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  prescaler_cmp_eq0000_wg_cy<2> (prescaler_cmp_eq0000_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  prescaler_cmp_eq0000_wg_cy<3> (prescaler_cmp_eq0000_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  prescaler_cmp_eq0000_wg_cy<4> (prescaler_cmp_eq0000_wg_cy<4>)
+     MUXCY:CI->O          31   0.141   1.265  prescaler_cmp_eq0000_wg_cy<5> (prescaler_cmp_eq0000)
+     LUT4:I3->O            8   0.648   0.757  tens_not0001 (tens_not0001)
+     FDRE:R                    0.869          units_0
+    ----------------------------------------
+    Total                      6.401ns (3.789ns logic, 2.612ns route)
+                                       (59.2% logic, 40.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 31 / 10
+-------------------------------------------------------------------------
+Offset:              7.142ns (Levels of Logic = 2)
+  Source:            display/digit_data_1 (FF)
+  Destination:       SEG<7> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: display/digit_data_1 to SEG<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              9   0.591   0.963  display/digit_data_1 (display/digit_data_1)
+     LUT4:I0->O            1   0.648   0.420  display/decoder/Mrom_SEG31 (SEG_3_OBUF)
+     OBUF:I->O                 4.520          SEG_3_OBUF (SEG<3>)
+    ----------------------------------------
+    Total                      7.142ns (5.759ns logic, 1.383ns route)
+                                       (80.6% logic, 19.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.22 secs
+ 
+--> 
+
+Total memory usage is 152148 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

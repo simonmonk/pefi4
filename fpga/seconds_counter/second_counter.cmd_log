@@ -1,0 +1,12 @@
+xst -intstyle ise -ifn "F:/WinShare/fpga/seconds_counter/second_counter.xst" -ofn "F:/WinShare/fpga/seconds_counter/second_counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_7_seg_elbert.ucf -p xc3s50a-tq144-4 second_counter.ngc second_counter.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o second_counter_map.ncd second_counter.ngd second_counter.pcf 
+par -w -intstyle ise -ol high -t 1 second_counter_map.ncd second_counter.ncd second_counter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml second_counter.twx second_counter.ncd -o second_counter.twr second_counter.pcf -ucf counter_7_seg_elbert.ucf 
+bitgen -intstyle ise -f second_counter.ut second_counter.ncd 
+xst -intstyle ise -ifn "F:/WinShare/fpga/seconds_counter/second_counter.xst" -ofn "F:/WinShare/fpga/seconds_counter/second_counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_7_seg_elbert.ucf -p xc3s50a-tq144-4 second_counter.ngc second_counter.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o second_counter_map.ncd second_counter.ngd second_counter.pcf 
+par -w -intstyle ise -ol high -t 1 second_counter_map.ncd second_counter.ncd second_counter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml second_counter.twx second_counter.ncd -o second_counter.twr second_counter.pcf -ucf counter_7_seg_elbert.ucf 
+bitgen -intstyle ise -f second_counter.ut second_counter.ncd 

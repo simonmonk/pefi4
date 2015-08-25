@@ -1,0 +1,18 @@
+xst -intstyle ise -ifn "F:/WinShare/fpga/data_selector_verilog/data_selector.xst" -ofn "F:/WinShare/fpga/data_selector_verilog/data_selector.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc data_selector_elbert.ucf -p xc3s50a-tq144-4 data_selector.ngc data_selector.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o data_selector_map.ncd data_selector.ngd data_selector.pcf 
+par -w -intstyle ise -ol high -t 1 data_selector_map.ncd data_selector.ncd data_selector.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml data_selector.twx data_selector.ncd -o data_selector.twr data_selector.pcf -ucf data_selector_elbert.ucf 
+bitgen -intstyle ise -f data_selector.ut data_selector.ncd 
+xst -intstyle ise -ifn "F:/WinShare/fpga/data_selector_verilog/data_selector.xst" -ofn "F:/WinShare/fpga/data_selector_verilog/data_selector.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/data_selector_verilog/data_selector.xst" -ofn "F:/WinShare/fpga/data_selector_verilog/data_selector.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/data_selector_verilog/data_selector.xst" -ofn "F:/WinShare/fpga/data_selector_verilog/data_selector.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/data_selector_verilog/data_selector.xst" -ofn "F:/WinShare/fpga/data_selector_verilog/data_selector.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/data_selector_verilog/data_selector.xst" -ofn "F:/WinShare/fpga/data_selector_verilog/data_selector.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/data_selector_verilog/data_selector.xst" -ofn "F:/WinShare/fpga/data_selector_verilog/data_selector.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/data_selector_verilog/data_selector.xst" -ofn "F:/WinShare/fpga/data_selector_verilog/data_selector.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc data_selector_elbert.ucf -p xc3s50a-tq144-4 data_selector.ngc data_selector.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o data_selector_map.ncd data_selector.ngd data_selector.pcf 
+par -w -intstyle ise -ol high -t 1 data_selector_map.ncd data_selector.ncd data_selector.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml data_selector.twx data_selector.ncd -o data_selector.twr data_selector.pcf -ucf data_selector_elbert.ucf 
+bitgen -intstyle ise -f data_selector.ut data_selector.ncd 

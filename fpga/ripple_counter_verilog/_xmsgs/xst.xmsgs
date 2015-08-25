@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="2474" delta="new" >Clock and clock enable of register &lt;<arg fmt="%s" index="1">Q_3</arg>&gt; are driven by the same logic. The clock enable is removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2474" delta="new" >Clock and clock enable of register &lt;<arg fmt="%s" index="1">Q_2</arg>&gt; are driven by the same logic. The clock enable is removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2474" delta="new" >Clock and clock enable of register &lt;<arg fmt="%s" index="1">Q_1</arg>&gt; are driven by the same logic. The clock enable is removed.
+</msg>
+
+<msg type="warning" file="Xst" num="2474" delta="new" >Clock and clock enable of register &lt;<arg fmt="%s" index="1">Q_0</arg>&gt; are driven by the same logic. The clock enable is removed.
+</msg>
+
+</messages>
+

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=F:\WinShare\fpga\counter_parameterized\ripple_counter.ncd
+OUTFILE=F:\WinShare\fpga\counter_parameterized\ripple_counter.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50a-4tq144
+WORKINGDIR=F:\WinShare\fpga\counter_parameterized
+LICENSE=WebPack
+USER_INFO=211056295_0_0_731

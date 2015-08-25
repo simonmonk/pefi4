@@ -1,0 +1,16 @@
+# User Constraint File for 4-bit ripple counter implementation on Elbert V2
+NET "CLK" CLOCK_DEDICATED_ROUTE = FALSE;
+
+# Push button switch 1 is connected to pin 80
+NET "CLK" LOC = P80;   # SW1
+NET "CLR" LOC = P79;   # SW2
+ 
+# Internal pull-ups need to be enabled 
+NET "CLK" PULLUP;
+NET "CLR" PULLUP;
+
+# LEDs
+NET "Q0" LOC = P55;   # LED1
+NET "Q1" LOC = P54;   # LED2
+NET "Q2" LOC = P51;   # LED3
+NET "Q3" LOC = P50;   # LED4

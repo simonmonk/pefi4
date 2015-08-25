@@ -1,0 +1,27 @@
+xst -intstyle ise -ifn "F:/WinShare/fpga/ripple_counter_verilog/ripple_counter.xst" -ofn "F:/WinShare/fpga/ripple_counter_verilog/ripple_counter.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/ripple_counter_verilog/ripple_counter.xst" -ofn "F:/WinShare/fpga/ripple_counter_verilog/ripple_counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ripple_counter.ucf -p xc3s50a-tq144-4 ripple_counter.ngc ripple_counter.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o ripple_counter_map.ncd ripple_counter.ngd ripple_counter.pcf 
+par -w -intstyle ise -ol high -t 1 ripple_counter_map.ncd ripple_counter.ncd ripple_counter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ripple_counter.twx ripple_counter.ncd -o ripple_counter.twr ripple_counter.pcf -ucf ripple_counter.ucf 
+bitgen -intstyle ise -f ripple_counter.ut ripple_counter.ncd 
+xst -intstyle ise -ifn "F:/WinShare/fpga/ripple_counter_verilog/ripple_counter.xst" -ofn "F:/WinShare/fpga/ripple_counter_verilog/ripple_counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ripple_counter.ucf -p xc3s50a-tq144-4 ripple_counter.ngc ripple_counter.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o ripple_counter_map.ncd ripple_counter.ngd ripple_counter.pcf 
+par -w -intstyle ise -ol high -t 1 ripple_counter_map.ncd ripple_counter.ncd ripple_counter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ripple_counter.twx ripple_counter.ncd -o ripple_counter.twr ripple_counter.pcf -ucf ripple_counter.ucf 
+bitgen -intstyle ise -f ripple_counter.ut ripple_counter.ncd 
+xst -intstyle ise -ifn "F:/WinShare/fpga/ripple_counter_verilog/ripple_counter.xst" -ofn "F:/WinShare/fpga/ripple_counter_verilog/ripple_counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ripple_counter.ucf -p xc3s50a-tq144-4 ripple_counter.ngc ripple_counter.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o ripple_counter_map.ncd ripple_counter.ngd ripple_counter.pcf 
+par -w -intstyle ise -ol high -t 1 ripple_counter_map.ncd ripple_counter.ncd ripple_counter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ripple_counter.twx ripple_counter.ncd -o ripple_counter.twr ripple_counter.pcf -ucf ripple_counter.ucf 
+xst -intstyle ise -ifn "F:/WinShare/fpga/ripple_counter_verilog/ripple_counter.xst" -ofn "F:/WinShare/fpga/ripple_counter_verilog/ripple_counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ripple_counter.ucf -p xc3s50a-tq144-4 ripple_counter.ngc ripple_counter.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o ripple_counter_map.ncd ripple_counter.ngd ripple_counter.pcf 
+par -w -intstyle ise -ol high -t 1 ripple_counter_map.ncd ripple_counter.ncd ripple_counter.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml ripple_counter.twx ripple_counter.ncd -o ripple_counter.twr ripple_counter.pcf -ucf ripple_counter.ucf 
+xst -intstyle ise -ifn "F:/WinShare/fpga/ripple_counter_verilog/ripple_counter.xst" -ofn "F:/WinShare/fpga/ripple_counter_verilog/ripple_counter.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ripple_counter.ucf -p xc3s50a-tq144-4 ripple_counter.ngc ripple_counter.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o ripple_counter_map.ncd ripple_counter.ngd ripple_counter.pcf 
+par -w -intstyle ise -ol high -t 1 ripple_counter_map.ncd ripple_counter.ncd ripple_counter.pcf 

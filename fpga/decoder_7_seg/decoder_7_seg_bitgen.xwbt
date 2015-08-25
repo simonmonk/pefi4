@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=F:\WinShare\fpga\decoder_7_seg\decoder_7_seg.ncd
+OUTFILE=F:\WinShare\fpga\decoder_7_seg\decoder_7_seg.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50a-4tq144
+WORKINGDIR=F:\WinShare\fpga\decoder_7_seg
+LICENSE=WebPack
+USER_INFO=211056295_0_0_731

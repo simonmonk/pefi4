@@ -1,0 +1,71 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Wed Aug 19 15:04:55 2015
+# Process ID: 932
+# Log file: F:/WinShare/fpga/data_selector/planAhead_run_1/planAhead.log
+# Journal file: F:/WinShare/fpga/data_selector/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from //vboxsrv/si/WinShare/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [//vboxsrv/si/WinShare/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [//vboxsrv/si/WinShare/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source F:/WinShare/fpga/data_selector/pa.fromNetlist.tcl
+# create_project -name data_selector -dir "F:/WinShare/fpga/data_selector/planAhead_run_1" -part xc3s50atq144-4
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "F:/WinShare/fpga/data_selector/data_selector.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {F:/WinShare/fpga/data_selector} }
+# set_property target_constrs_file "data_selector_elbert.ucf" [current_fileset -constrset]
+Adding file 'F:/WinShare/fpga/data_selector/data_selector_elbert.ucf' to fileset 'constrs_1'
+# add_files [list {data_selector_elbert.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s50atq144-4
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design data_selector.ngc ...
+WARNING:NetListWriters:298 - No output is written to data_selector.xncf,
+   ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file data_selector.edif ...
+ngc2edif: Total memory usage is 44728 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/data_selector.data/cache/data_selector_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_1/data_selector.data/cache/data_selector_ngc_zx.edif]
+INFO: [Designutils 20-910] Reading macro library //vboxsrv/si/WinShare/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/hd_int_macros.edn
+Parsing EDIF File [//vboxsrv/si/WinShare/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/hd_int_macros.edn]
+Finished Parsing EDIF File [//vboxsrv/si/WinShare/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/hd_int_macros.edn]
+Loading clock regions from //vboxsrv/si/WinShare/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50a/ClockRegion.xml
+Loading clock buffers from //vboxsrv/si/WinShare/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50a/ClockBuffers.xml
+Loading package from //vboxsrv/si/WinShare/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50a/tq144/Package.xml
+Loading io standards from //vboxsrv/si/WinShare/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from //vboxsrv/si/WinShare/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/xc3s50a/tq144/SSORules.xml
+Loading list of drcs for the architecture : //vboxsrv/si/WinShare/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3a/drc.xml
+INFO: [Timing 38-77] Reading timing library //vboxsrv/si/WinShare/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/spartan3a-4.lib.
+INFO: [Timing 38-34] Done reading timing library //vboxsrv/si/WinShare/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan3a/spartan3a/spartan3a-4.lib.
+Parsing UCF File [F:/WinShare/fpga/data_selector/data_selector_elbert.ucf]
+Finished Parsing UCF File [F:/WinShare/fpga/data_selector/data_selector_elbert.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 7edf0322
+link_design: Time (s): elapsed = 00:03:34 . Memory (MB): peak = 413.727 ; gain = 49.164
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See F:/WinShare/fpga/data_selector\planAhead_pid932.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Wed Aug 19 16:34:31 2015...
+INFO: [Common 17-83] Releasing license: PlanAhead

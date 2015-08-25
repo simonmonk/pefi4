@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/decoder_7_seg.xst" -ofn "F:/WinShare/fpga/counter_decoder/decoder_7_seg.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/decoder_7_seg.xst" -ofn "F:/WinShare/fpga/counter_decoder/decoder_7_seg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 decoder_7_seg.ngc decoder_7_seg.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o decoder_7_seg_map.ncd decoder_7_seg.ngd decoder_7_seg.pcf 
+par -w -intstyle ise -ol high -t 1 decoder_7_seg_map.ncd decoder_7_seg.ncd decoder_7_seg.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml decoder_7_seg.twx decoder_7_seg.ncd -o decoder_7_seg.twr decoder_7_seg.pcf -ucf counter_decoder.ucf 
+bitgen -intstyle ise -f decoder_7_seg.ut decoder_7_seg.ncd 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/decoder_7_seg.xst" -ofn "F:/WinShare/fpga/counter_decoder/decoder_7_seg.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 decoder_7_seg.ngc decoder_7_seg.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 decoder_7_seg.ngc decoder_7_seg.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 decoder_7_seg.ngc decoder_7_seg.ngd  

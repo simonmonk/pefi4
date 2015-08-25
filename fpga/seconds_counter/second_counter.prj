@@ -1,0 +1,3 @@
+verilog work "decoder_7_seg.v"
+verilog work "multiplexed_7_seg_display.v"
+verilog work "second_counter.v"

@@ -1,0 +1,15 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Aug 25 14:47:53 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Q<0>" LOCATE = SITE "P55" LEVEL 1;
+COMP "Q<1>" LOCATE = SITE "P54" LEVEL 1;
+COMP "Q<2>" LOCATE = SITE "P51" LEVEL 1;
+COMP "Q<3>" LOCATE = SITE "P50" LEVEL 1;
+COMP "CLK" LOCATE = SITE "P80" LEVEL 1;
+PIN CLK_pin<0> = BEL "CLK" PINNAME PAD;
+PIN "CLK_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "CLR" LOCATE = SITE "P79" LEVEL 1;
+SCHEMATIC END;
+

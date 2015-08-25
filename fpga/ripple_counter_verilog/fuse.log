@@ -1,0 +1,20 @@
+Running: F:\WinShare\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o F:/WinShare/fpga/ripple_counter_verilog/counter_tester_isim_beh.exe -prj F:/WinShare/fpga/ripple_counter_verilog/counter_tester_beh.prj work.counter_tester work.glbl 
+ISim P.20131013 (signature 0x8ef4fb42)
+Number of CPUs detected in this system: 1
+Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Determining compilation order of HDL files
+Analyzing Verilog file "F:/WinShare/fpga/ripple_counter_verilog/ripple_counter.v" into library work
+Analyzing Verilog file "F:/WinShare/fpga/ripple_counter_verilog/counter_tester.v" into library work
+Analyzing Verilog file "F:/WinShare/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 99452 KB
+Fuse CPU Usage: 200 ms
+Compiling module ripple_counter
+Compiling module counter_tester
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 3 Verilog Units
+Built simulation executable F:/WinShare/fpga/ripple_counter_verilog/counter_tester_isim_beh.exe
+Fuse Memory Usage: 102912 KB
+Fuse CPU Usage: 200 ms

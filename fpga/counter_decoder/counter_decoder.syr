@@ -1,0 +1,365 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.66 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.67 secs
+ 
+--> Reading design: counter_decoder.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "counter_decoder.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "counter_decoder"
+Output Format                      : NGC
+Target Device                      : xc3s50a-4-tq144
+
+---- Source Options
+Top Module Name                    : counter_decoder
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "ripple_counter.v" in library work
+Compiling verilog file "decoder_7_seg.v" in library work
+Module <ripple_counter> compiled
+Compiling verilog file "counter_decoder.v" in library work
+Module <decoder_7_seg> compiled
+Module <counter_decoder> compiled
+No errors in compilation
+Analysis of file <"counter_decoder.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <counter_decoder> in library <work>.
+
+Analyzing hierarchy for module <decoder_7_seg> in library <work>.
+
+Analyzing hierarchy for module <ripple_counter> in library <work> with parameters.
+	SIZE = "00000000000000000000000000000100"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <counter_decoder>.
+Module <counter_decoder> is correct for synthesis.
+ 
+Analyzing module <decoder_7_seg> in library <work>.
+Module <decoder_7_seg> is correct for synthesis.
+ 
+Analyzing module <ripple_counter> in library <work>.
+	SIZE = 32'sb00000000000000000000000000000100
+Module <ripple_counter> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <decoder_7_seg>.
+    Related source file is "decoder_7_seg.v".
+    Found 16x8-bit ROM for signal <SEG>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <decoder_7_seg> synthesized.
+
+
+Synthesizing Unit <ripple_counter>.
+    Related source file is "ripple_counter.v".
+WARNING:Xst:2475 - Clock and clock enable of counter <Q> are driven by the same logic. The clock enable is removed.
+    Found 4-bit up counter for signal <Q>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <ripple_counter> synthesized.
+
+
+Synthesizing Unit <counter_decoder>.
+    Related source file is "counter_decoder.v".
+Unit <counter_decoder> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <counter_decoder> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block counter_decoder, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : counter_decoder.ngr
+Top Level Output File Name         : counter_decoder
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 9
+
+Cell Usage :
+# BELS                             : 11
+#      LUT2                        : 1
+#      LUT3                        : 1
+#      LUT4                        : 8
+#      VCC                         : 1
+# FlipFlops/Latches                : 4
+#      FD                          : 3
+#      FDR                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 8
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50atq144-4 
+
+ Number of Slices:                        6  out of    704     0%  
+ Number of Slice Flip Flops:              4  out of   1408     0%  
+ Number of 4 input LUTs:                 10  out of   1408     0%  
+ Number of IOs:                           9
+ Number of bonded IOBs:                   9  out of    108     8%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 4     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 2.516ns (Maximum Frequency: 397.456MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 7.255ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 2.516ns (frequency: 397.456MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               2.516ns (Levels of Logic = 1)
+  Source:            counter/Q_1 (FF)
+  Destination:       counter/Q_1 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: counter/Q_1 to counter/Q_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              10   0.591   1.025  counter/Q_1 (counter/Q_1)
+     LUT2:I0->O            1   0.648   0.000  counter/Mcount_Q_xor<1>11 (Result<1>)
+     FD:D                      0.252          counter/Q_1
+    ----------------------------------------
+    Total                      2.516ns (1.491ns logic, 1.025ns route)
+                                       (59.3% logic, 40.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 28 / 7
+-------------------------------------------------------------------------
+Offset:              7.255ns (Levels of Logic = 2)
+  Source:            counter/Q_0 (FF)
+  Destination:       SEG<2> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: counter/Q_0 to SEG<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             11   0.591   1.076  counter/Q_0 (counter/Q_0)
+     LUT4:I0->O            1   0.648   0.420  decoder/Mrom_SEG21 (SEG_2_OBUF)
+     OBUF:I->O                 4.520          SEG_2_OBUF (SEG<2>)
+    ----------------------------------------
+    Total                      7.255ns (5.759ns logic, 1.496ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.52 secs
+ 
+--> 
+
+Total memory usage is 151124 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

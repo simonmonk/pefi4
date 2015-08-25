@@ -1,0 +1,19 @@
+# User Constraint File for counter_decoder implementation on Elbert V2
+
+NET "CLK" CLOCK_DEDICATED_ROUTE = FALSE;
+
+# Push buttons
+NET "CLK" LOC = P80;   # SW1
+NET "CLK" PULLUP;
+
+# 7-segments
+NET "SEG[7]" LOC = P117;
+NET "SEG[6]" LOC = P116;
+NET "SEG[5]" LOC = P115;
+NET "SEG[4]" LOC = P113;
+NET "SEG[3]" LOC = P112;
+NET "SEG[2]" LOC = P111;
+NET "SEG[1]" LOC = P110;
+NET "SEG[0]" LOC = P114;
+
+

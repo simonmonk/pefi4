@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=F:\WinShare\fpga\ripple_counter_verilog\ripple_counter.ncd
+OUTFILE=F:\WinShare\fpga\ripple_counter_verilog\ripple_counter.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50a-4tq144
+WORKINGDIR=F:\WinShare\fpga\ripple_counter_verilog
+LICENSE=WebPack
+USER_INFO=211056295_0_0_731

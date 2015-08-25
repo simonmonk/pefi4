@@ -1,0 +1,11 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Aug 19 15:27:31 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "SEL" LOCATE = SITE "P78" LEVEL 1;
+COMP "A" LOCATE = SITE "P80" LEVEL 1;
+COMP "B" LOCATE = SITE "P79" LEVEL 1;
+COMP "Q" LOCATE = SITE "P46" LEVEL 1;
+SCHEMATIC END;
+

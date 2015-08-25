@@ -1,0 +1,113 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : ripple_counter.vf
+// /___/   /\     Timestamp : 08/19/2015 16:58:20
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3a -verilog F:/WinShare/fpga/ripple_counter/ripple_counter.vf -w F:/WinShare/fpga/ripple_counter/ripple_counter.sch
+//Design Name: ripple_counter
+//Device: spartan3a
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_ripple_counter(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module ripple_counter(CLK, 
+                      CLR, 
+                      Q0, 
+                      Q1, 
+                      Q2, 
+                      Q3);
+
+    input CLK;
+    input CLR;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   
+   wire XLXN_1;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   (* HU_SET = "XLXI_1_0" *) 
+   FJKC_HXILINX_ripple_counter #( .INIT(1'b0) ) XLXI_1 (.C(CLK), 
+                                       .CLR(CLR), 
+                                       .J(XLXN_1), 
+                                       .K(XLXN_1), 
+                                       .Q(Q0_DUMMY));
+   (* HU_SET = "XLXI_2_3" *) 
+   FJKC_HXILINX_ripple_counter #( .INIT(1'b0) ) XLXI_2 (.C(Q0_DUMMY), 
+                                       .CLR(CLR), 
+                                       .J(XLXN_11), 
+                                       .K(XLXN_11), 
+                                       .Q(Q1_DUMMY));
+   (* HU_SET = "XLXI_3_1" *) 
+   FJKC_HXILINX_ripple_counter #( .INIT(1'b0) ) XLXI_3 (.C(Q1_DUMMY), 
+                                       .CLR(CLR), 
+                                       .J(XLXN_12), 
+                                       .K(XLXN_12), 
+                                       .Q(Q2_DUMMY));
+   (* HU_SET = "XLXI_4_2" *) 
+   FJKC_HXILINX_ripple_counter #( .INIT(1'b0) ) XLXI_4 (.C(Q2_DUMMY), 
+                                       .CLR(CLR), 
+                                       .J(XLXN_13), 
+                                       .K(XLXN_13), 
+                                       .Q(Q3));
+   VCC  XLXI_5 (.P(XLXN_1));
+   VCC  XLXI_6 (.P(XLXN_11));
+   VCC  XLXI_7 (.P(XLXN_12));
+   VCC  XLXI_8 (.P(XLXN_13));
+endmodule

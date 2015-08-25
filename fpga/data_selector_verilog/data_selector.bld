@@ -1,0 +1,36 @@
+Release 14.7 ngdbuild P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: F:\WinShare\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -nt timestamp -uc data_selector_elbert.ucf -p
+xc3s50a-tq144-4 data_selector.ngc data_selector.ngd
+
+Reading NGO file "F:/WinShare/fpga/data_selector_verilog/data_selector.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "data_selector_elbert.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 98960 kilobytes
+
+Writing NGD file "data_selector.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   1 sec
+
+Writing NGDBUILD log file "data_selector.bld"...

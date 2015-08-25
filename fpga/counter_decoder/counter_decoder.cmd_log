@@ -1,0 +1,74 @@
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 counter_decoder.ngc counter_decoder.ngd  
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 counter_decoder.ngc counter_decoder.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o counter_decoder_map.ncd counter_decoder.ngd counter_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 counter_decoder_map.ncd counter_decoder.ncd counter_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_decoder.twx counter_decoder.ncd -o counter_decoder.twr counter_decoder.pcf -ucf counter_decoder.ucf 
+bitgen -intstyle ise -f counter_decoder.ut counter_decoder.ncd 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 counter_decoder.ngc counter_decoder.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o counter_decoder_map.ncd counter_decoder.ngd counter_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 counter_decoder_map.ncd counter_decoder.ncd counter_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_decoder.twx counter_decoder.ncd -o counter_decoder.twr counter_decoder.pcf -ucf counter_decoder.ucf 
+bitgen -intstyle ise -f counter_decoder.ut counter_decoder.ncd 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 counter_decoder.ngc counter_decoder.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o counter_decoder_map.ncd counter_decoder.ngd counter_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 counter_decoder_map.ncd counter_decoder.ncd counter_decoder.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 counter_decoder.ngc counter_decoder.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o counter_decoder_map.ncd counter_decoder.ngd counter_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 counter_decoder_map.ncd counter_decoder.ncd counter_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_decoder.twx counter_decoder.ncd -o counter_decoder.twr counter_decoder.pcf -ucf counter_decoder.ucf 
+bitgen -intstyle ise -f counter_decoder.ut counter_decoder.ncd 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 counter_decoder.ngc counter_decoder.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o counter_decoder_map.ncd counter_decoder.ngd counter_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 counter_decoder_map.ncd counter_decoder.ncd counter_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_decoder.twx counter_decoder.ncd -o counter_decoder.twr counter_decoder.pcf -ucf counter_decoder.ucf 
+bitgen -intstyle ise -f counter_decoder.ut counter_decoder.ncd 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 counter_decoder.ngc counter_decoder.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o counter_decoder_map.ncd counter_decoder.ngd counter_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 counter_decoder_map.ncd counter_decoder.ncd counter_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_decoder.twx counter_decoder.ncd -o counter_decoder.twr counter_decoder.pcf -ucf counter_decoder.ucf 
+bitgen -intstyle ise -f counter_decoder.ut counter_decoder.ncd 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 counter_decoder.ngc counter_decoder.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o counter_decoder_map.ncd counter_decoder.ngd counter_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 counter_decoder_map.ncd counter_decoder.ncd counter_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_decoder.twx counter_decoder.ncd -o counter_decoder.twr counter_decoder.pcf -ucf counter_decoder.ucf 
+bitgen -intstyle ise -f counter_decoder.ut counter_decoder.ncd 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 counter_decoder.ngc counter_decoder.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o counter_decoder_map.ncd counter_decoder.ngd counter_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 counter_decoder_map.ncd counter_decoder.ncd counter_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_decoder.twx counter_decoder.ncd -o counter_decoder.twr counter_decoder.pcf -ucf counter_decoder.ucf 
+bitgen -intstyle ise -f counter_decoder.ut counter_decoder.ncd 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 counter_decoder.ngc counter_decoder.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o counter_decoder_map.ncd counter_decoder.ngd counter_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 counter_decoder_map.ncd counter_decoder.ncd counter_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_decoder.twx counter_decoder.ncd -o counter_decoder.twr counter_decoder.pcf -ucf counter_decoder.ucf 
+bitgen -intstyle ise -f counter_decoder.ut counter_decoder.ncd 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 counter_decoder.ngc counter_decoder.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o counter_decoder_map.ncd counter_decoder.ngd counter_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 counter_decoder_map.ncd counter_decoder.ncd counter_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_decoder.twx counter_decoder.ncd -o counter_decoder.twr counter_decoder.pcf -ucf counter_decoder.ucf 
+bitgen -intstyle ise -f counter_decoder.ut counter_decoder.ncd 
+xst -intstyle ise -ifn "F:/WinShare/fpga/counter_decoder/counter_decoder.xst" -ofn "F:/WinShare/fpga/counter_decoder/counter_decoder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counter_decoder.ucf -p xc3s50a-tq144-4 counter_decoder.ngc counter_decoder.ngd  
+map -intstyle ise -p xc3s50a-tq144-4 -cm area -ir off -pr off -c 100 -o counter_decoder_map.ncd counter_decoder.ngd counter_decoder.pcf 
+par -w -intstyle ise -ol high -t 1 counter_decoder_map.ncd counter_decoder.ncd counter_decoder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml counter_decoder.twx counter_decoder.ncd -o counter_decoder.twr counter_decoder.pcf -ucf counter_decoder.ucf 
+bitgen -intstyle ise -f counter_decoder.ut counter_decoder.ncd 

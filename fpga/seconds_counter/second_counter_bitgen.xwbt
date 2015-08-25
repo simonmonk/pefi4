@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=F:\WinShare\fpga\seconds_counter\second_counter.ncd
+OUTFILE=F:\WinShare\fpga\seconds_counter\second_counter.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50a-4tq144
+WORKINGDIR=F:\WinShare\fpga\seconds_counter
+LICENSE=WebPack
+USER_INFO=211056295_0_0_731

@@ -1,0 +1,3 @@
+verilog work "ripple_counter.v"
+verilog work "decoder_7_seg.v"
+verilog work "counter_decoder.v"

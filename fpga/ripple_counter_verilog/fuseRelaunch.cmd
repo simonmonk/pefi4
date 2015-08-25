@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "F:/WinShare/fpga/ripple_counter_verilog/counter_tester_isim_beh.exe" -prj "F:/WinShare/fpga/ripple_counter_verilog/counter_tester_beh.prj" "work.counter_tester" "work.glbl" 
